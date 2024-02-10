@@ -4,9 +4,6 @@ const http = require("http");
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
-app.set("views", "Views");
-app.use(express.static("Views"));
-
 app.get("/", (req, res) => {
   return res.render("index.html");
 });
